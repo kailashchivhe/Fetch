@@ -4,4 +4,6 @@
     <string name="expandable_header">List ID:</string>
     <string name="expandable_content_description_expand">Expand</string>
     <string name="expandable_content_description_collapse">Collapse</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="loading_text">Fetching items…</string>
 </resources>

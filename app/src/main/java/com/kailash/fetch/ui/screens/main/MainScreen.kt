@@ -27,7 +27,9 @@ fun MainScreen(modifier: Modifier, viewModel: MainViewModel) {
         }
         is MainScreenUiState.Error -> {
             //Show Error UI
-            ErrorComponent(modifier, LocalContext.current.getString(R.string.error_message))
+            ErrorComponent(modifier, LocalContext.current.getString(R.string.error_message)) {
+                viewModel.fetchItems()
+            }
         }
     }
 }

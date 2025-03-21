@@ -2,12 +2,18 @@ package com.kailash.fetch.ui.components.main
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -23,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import com.kailash.fetch.R
 
 @Composable
-fun ErrorComponent(modifier: Modifier, message: String) {
+fun ErrorComponent(modifier: Modifier, message: String, onRetry: () -> Unit = {}) {
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -37,27 +43,51 @@ fun ErrorComponent(modifier: Modifier, message: String) {
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
             shape = MaterialTheme.shapes.medium
         ) {
-            Row(
+            Column(
                 modifier = Modifier
-                    .wrapContentSize()
-                    .padding(16.dp)
-                    .align(Alignment.CenterHorizontally)
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Icon(
-                    imageVector = Icons.Default.Warning,
+                Row(
                     modifier = Modifier
                         .wrapContentSize(),
-                    contentDescription = message,
-                    tint = MaterialTheme.colorScheme.onErrorContainer
-                )
-                Text(
-                    text = message,
-                    modifier = Modifier
-                        .wrapContentSize(),
-                    color = MaterialTheme.colorScheme.onErrorContainer,
-                    style = MaterialTheme.typography.titleMedium,
-                    textAlign = TextAlign.Center
-                )
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Warning,
+                        modifier = Modifier
+                            .padding(end = 8.dp),
+                        contentDescription = message,
+                        tint = MaterialTheme.colorScheme.onErrorContainer
+                    )
+                    Text(
+                        text = message,
+                        modifier = Modifier
+                            .wrapContentSize()
+                            .padding(top = 16.dp),
+                        color = MaterialTheme.colorScheme.onErrorContainer,
+                        style = MaterialTheme.typography.titleMedium,
+                        textAlign = TextAlign.Center
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(16.dp)) // Add vertical space
+
+                Button(
+                    onClick = onRetry, // Call the onRetry callback when clicked
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Refresh,
+                        contentDescription = LocalContext.current.getString(R.string.retry_button_text),
+                        modifier = Modifier.size(ButtonDefaults.IconSize)
+                    )
+                    Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                    Text(LocalContext.current.getString(R.string.retry_button_text))
+                }
             }
         }
     }

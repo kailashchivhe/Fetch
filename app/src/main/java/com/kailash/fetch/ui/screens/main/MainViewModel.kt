@@ -19,10 +19,11 @@ class MainViewModel @Inject constructor(private val repository: ItemRepository) 
     fun fetchItems() {
         viewModelScope.launch {
             try {
+                _mainScreenUiState.value = MainScreenUiState.Loading
                 val items = repository.getItems()
                 //Filter and sort
                 val filteredMapItems = items
-                    .filter { !it.name.isNullOrBlank() && it.name.isNotEmpty() }
+                    .filter { !it.name.isNullOrBlank() }
                     .sortedWith(compareBy<Item> { it.listId }.thenBy { it.name })
                     .groupBy { it.listId }
 
