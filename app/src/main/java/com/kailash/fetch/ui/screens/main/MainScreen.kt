@@ -10,6 +10,14 @@ import com.kailash.fetch.ui.components.main.ErrorComponent
 import com.kailash.fetch.ui.components.main.ItemListComponent
 import com.kailash.fetch.ui.components.main.LoadingComponent
 
+/**
+ * The main screen of the application.
+ *
+ * This composable function displays the UI based on the current [MainScreenUiState].
+ * It uses a [MainViewModel] to manage the UI state.
+ *
+ * @param viewModel The [MainViewModel] used to manage the UI state.
+ */
 @Composable
 fun MainScreen(modifier: Modifier, viewModel: MainViewModel) {
     val uiState = viewModel.mainScreenUiState.collectAsState()
