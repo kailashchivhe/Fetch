@@ -13,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: ItemRepository) : ViewModel() {
 
-    private val _mainScreenUiState = MutableStateFlow<MainScreenUiState>(MainScreenUiState.isLoading)
+    private val _mainScreenUiState = MutableStateFlow<MainScreenUiState>(MainScreenUiState.Loading)
     val mainScreenUiState: StateFlow<MainScreenUiState> = _mainScreenUiState
 
     fun fetchItems() {
@@ -26,10 +26,9 @@ class MainViewModel @Inject constructor(private val repository: ItemRepository) 
                     .sortedWith(compareBy<Item> { it.listId }.thenBy { it.name })
                     .groupBy { it.listId }
 
-                _mainScreenUiState.value = MainScreenUiState.onSuccess(filteredMapItems)
-
+                _mainScreenUiState.value = MainScreenUiState.Success(filteredMapItems)
             } catch (e: Exception) {
-                _mainScreenUiState.value = MainScreenUiState.onError("Error fetching items: ${e.message}")
+                _mainScreenUiState.value = MainScreenUiState.Error
             }
         }
     }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fetch</string>
+    <string name="error_message">Something went wrong. Please try again later.</string>
+    <string name="expandable_header">List ID:</string>
+    <string name="expandable_content_description_expand">Expand</string>
+    <string name="expandable_content_description_collapse">Collapse</string>
 </resources>
