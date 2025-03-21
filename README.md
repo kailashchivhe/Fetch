@@ -13,9 +13,13 @@ This application demonstrates the ability to:
 
 **Screenshots:**
 
-| Light Mode           | Dark Mode            | Light Mode (Error) | Dark Mode (Error) |
-| :-------------------- | :-------------------- | :------------------- | :------------------ |
-| <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> | <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
+## Screenshots
+
+| Light Mode           | Dark Mode            |
+| :-------------------- | :-------------------- |
+| <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> |
+| Light Mode (Error) | Dark Mode (Error) |
+| <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
 
 
 
