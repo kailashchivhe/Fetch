@@ -18,6 +18,7 @@ This application demonstrates the ability to:
 | <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> | <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
 
 
+
 This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. This pattern was chosen to separate the UI and business logic, making the code more modular, testable and maintainable.
 
 **Design Patterns:**
@@ -32,7 +33,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 **UI Layer:**
 
 * The UI is built using Jetpack Compose, providing a declarative and modern approach to UI development.
-* Also uses dynamic colors devices android 12 and above.
+* Also uses dynamic color for devices Android 12 and above.
 
 ## Libraries and Technologies
 
