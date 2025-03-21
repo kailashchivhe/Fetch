@@ -50,7 +50,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 
 ## Setup and Installation
 
-1.  Clone the repository: `git clone [[repository URL]](https://github.com/kailashchivhe/Fetch.git)`
+1.  Clone the repository: `git clone https://github.com/kailashchivhe/Fetch.git`
 2.  Open the project in Android Studio.
 3.  Ensure you have the Android SDK (API level 34) installed.
 4.  Build and run the app on an emulator or physical device `min API 29 i.e. Android 10`.
