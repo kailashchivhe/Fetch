@@ -23,12 +23,13 @@ This application demonstrates the ability to:
 
 
 
-This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. This pattern was chosen to separate the UI and business logic, making the code more modular, testable and maintainable.
+This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. This pattern was chosen to separate the UI and business logic, making the code more modular, testable, and maintainable.
 
 **Design Patterns:**
 
 * **Repository Pattern:** Used to abstract data sources and provide a clean API for the ViewModel.
 * **Dependency Injection:** Hilt is used to manage dependencies.
+* **Observer Pattern:** Facilitates reactive UI updates based on changes in the ViewModel's data state.
 
 **Data Layer:**
 
@@ -37,7 +38,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 **UI Layer:**
 
 * The UI is built using Jetpack Compose, providing a declarative and modern approach to UI development.
-* Also uses dynamic color for devices Android 12 and above.
+* It also utilizes dynamic color for devices running Android 12 and above.
 
 ## Libraries and Technologies
 
@@ -58,6 +59,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 ## Potential Improvements and Future Work
 
 * Add Room DB for data caching.
+* Create a network module and a database module to completely segregate the UI. This ensures that the modules are independent and can be utilized in other applications.
 * Add Hilt ViewModel DI.
-* Improve the UI design with more animations and transitions.
 * Add Unit and Instrumentation tests.
+* Improve the UI design with more animations and transitions.
