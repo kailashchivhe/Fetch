@@ -13,7 +13,7 @@ class ItemRepositoryImpl @Inject constructor(private val fetchService: FetchServ
      * @return A [List] of [Item] objects.
      * @throws Exception If there is an error during the network request.
      */
-    override suspend fun getItems(): List<Item> {
+    override suspend fun getItems(): List<Item>? {
         return fetchService.getItems()
     }
 }

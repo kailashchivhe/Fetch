@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface FetchService {
     @GET(Constants.ITEMS_ENDPOINT)
-    suspend fun getItems(): List<Item>
+    suspend fun getItems(): List<Item>?
 }

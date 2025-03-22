@@ -56,14 +56,19 @@ class MainViewModel @Inject constructor(private val repository: ItemRepository) 
         viewModelScope.launch {
             try {
                 _mainScreenUiState.value = MainScreenUiState.Loading
-                val items = repository.getItems()
-                //Filter and sort
-                val filteredMapItems = items
-                    .filter { !it.name.isNullOrBlank() }
-                    .sortedWith(compareBy<Item> { it.listId }.thenBy { it.name })
-                    .groupBy { it.listId }
 
-                _mainScreenUiState.value = MainScreenUiState.Success(filteredMapItems)
+                val items = repository.getItems()
+                if (!items.isNullOrEmpty()) {
+                    //Filter and sort
+                    val filteredMapItems = items
+                        .filter { !it.name.isNullOrBlank() }
+                        .sortedWith(compareBy<Item> { it.listId }.thenBy { it.name })
+                        .groupBy { it.listId }
+                    _mainScreenUiState.value = MainScreenUiState.Success(filteredMapItems)
+                }
+                else {
+                    _mainScreenUiState.value = MainScreenUiState.Error
+                }
             } catch (e: Exception) {
                 _mainScreenUiState.value = MainScreenUiState.Error
             }
