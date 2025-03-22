@@ -12,16 +12,6 @@ This application demonstrates the ability to:
 * Display the processed data in an organized and user-friendly manner using an expandable list UI.
 
 
-## Screenshots
-
-| Light Mode           | Dark Mode            |
-| :-------------------- | :-------------------- |
-| <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> |
-| Light Mode (Error) | Dark Mode (Error) |
-| <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
-
-
-
 This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. This pattern was chosen to separate the UI and business logic, making the code more modular, testable, and maintainable.
 
 **Design Patterns:**
@@ -62,3 +52,11 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 * Add Hilt ViewModel DI.
 * Add Unit and Instrumentation tests.
 * Improve the UI design with more animations and transitions.
+
+## Screenshots
+
+| Light Mode           | Dark Mode            |
+| :-------------------- | :-------------------- |
+| <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> |
+| Light Mode (Error) | Dark Mode (Error) |
+| <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
