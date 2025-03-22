@@ -61,3 +61,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 | <img src="./screenshots/LightMode.gif" width="200" height="400" alt="Light Mode GIF"> | <img src="./screenshots/DarkMode.gif" width="200" height="400" alt="Dark Mode GIF"> |
 | Light Mode (Error) | Dark Mode (Error) |
 | <img src="./screenshots/LightModeError.png" width="200" height="400" alt="Light Mode Error"> | <img src="./screenshots/DarkModeError.png" width="200" height="400" alt="Dark Mode Error"> |
+
+## Author
+
+* Kailash Chivhe - [https://github.com/kailashchivhe](https://github.com/kailashchivhe)
