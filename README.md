@@ -11,7 +11,6 @@ This application demonstrates the ability to:
 * Filter and group data based on `listId`.
 * Display the processed data in an organized and user-friendly manner using an expandable list UI.
 
-**Screenshots:**
 
 ## Screenshots
 
