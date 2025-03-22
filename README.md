@@ -47,6 +47,7 @@ This project follows the **MVVM (Model-View-ViewModel)** architectural pattern. 
 
 ## Potential Improvements and Future Work
 
+* Incorporate search and filter features, as there is a large amount of data to look through.
 * Add Room DB for data caching.
 * Create a network module and a database module to completely segregate the UI. This ensures that the modules are independent and can be utilized in other applications.
 * Add Hilt ViewModel DI.
